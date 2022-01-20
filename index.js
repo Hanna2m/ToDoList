@@ -1,3 +1,4 @@
+
 function add() {
 
   let li = document.createElement("LI");
@@ -21,49 +22,46 @@ function add() {
   document.querySelector("ul").appendChild(li);
   document.form_main.task.value = "";
 
-  createButtons(li);
-}
-
-//adding press enter functionality
-document.getElementById('task').addEventListener('keypress', function (e) {
-  if (e.keyCode === 13 || e.which === 13) {
-      e.preventDefault();
-      add();
-      return false;
-  }
-});
-//end press enter functionality
-
+  //delete Btn
   let deleteButton = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  let editTaskButton = document.createElement("span");
-  let editTaskTxt = document.createTextNode("edit");
-
-  deleteButton.className = "close";
-  deleteButton.id = "delete-btn"
+  deleteButton.className = "material-icons"
+  let txt = document.createTextNode("delete");
+  deleteButton.id = "delete-btn";
+  deleteButton.style.height = "24px";
+  deleteButton.style.color = "red";
   deleteButton.appendChild(txt);
   li.appendChild(deleteButton);
 
+
   // edit button
-  editTaskButton.className = "edit";
-  editTaskButton.appendChild(editTaskTxt);
+
+  let editTaskButton = document.createElement("span");
+  editTaskButton.id = "edit-btn";
+  editTaskButton.className = "material-icons";
+  let editTxt = document.createTextNode("edit");
+  editTaskButton.style.height = "24px";
+  editTaskButton.style.color = "#DDDDDD";
+  editTaskButton.appendChild(editTxt);
   li.appendChild(editTaskButton);
-  editTaskButton.id = "edit-btn"
+  
+  
+  //delete task
+  deleteButton.addEventListener("click", (e) => 
+  (e.target.parentElement.style.display = "none"));
 
-  deleteButton.onclick = () =>
-    (deleteButton.parentElement.style.display = "none");
 
+  // edit task
   editTaskButton.onclick = (e) => {
     console.log("edit button clicked");
 
-    e.target.parentElement.classList.add("label");
+  e.target.parentElement.classList.add("label");
     // when user clicks edit:
     // assign current value of the list item to a variable
-    // console.log(e.target.parentElement);
+  console.log(e.target.parentElement);
 
     let listItems = document.querySelectorAll(".label");
-    // console.log(e.target.parentElement.innerText);
-    // console.log(listItems);
+    console.log(e.target.parentElement.innerText);
+    console.log(listItems);
     listItems.forEach((element) => {
       console.log(element);
       if (element === e.target) {
@@ -76,10 +74,20 @@ document.getElementById('task').addEventListener('keypress', function (e) {
     // when user clicks save button;
     // updated item appears in list
     // save button changes to edit button
-  };
+  // };
+  
+  return li;
+}
 
-
-
+//adding press enter functionality
+document.getElementById('task').addEventListener('keypress', function (e) {
+  if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+      add();
+      return false;
+  }
+});
+//end press enter functionality
 
 //completed task
 
@@ -99,4 +107,4 @@ document.querySelector("ul").addEventListener("click", (e) => {
     
   
  }
-});
+});}

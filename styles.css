@@ -5,6 +5,40 @@ body {
 
 }
 
+header {
+  height: 15vh;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: aliceblue;
+  padding-left: 16px;
+  font-size: 2.5em;
+  background-image: url(/abstract-img.jpeg);
+}
+
+form {
+  display:inline-flex;
+  margin-top: 2.25em;
+  width: max-content;
+}
+
+#task {
+  display:flex;
+  width: 400px;
+  height: 32px;
+  border-radius: 16px;
+  border-color: rgb(212, 212, 212);
+  padding-left: 16px;
+  justify-content: center;
+
+}
+
+button {
+  margin-left: 16px;
+  width: 80px;
+  border-radius: 16px;
+  border: none;
+
+}
 
 li {
     display: flex-block;
