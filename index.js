@@ -21,11 +21,37 @@ function createCloseButton(li) {
   li.appendChild(deleteButton);
 
   // edit button
+  editTaskButton.className = "edit";
   editTaskButton.appendChild(editTaskTxt);
   li.appendChild(editTaskButton);
 
   deleteButton.onclick = () =>
     (deleteButton.parentElement.style.display = "none");
+
+  editTaskButton.onclick = (e) => {
+    console.log("edit button clicked");
+
+    e.target.parentElement.classList.add("label");
+    // when user clicks edit:
+    // assign current value of the list item to a variable
+    // console.log(e.target.parentElement);
+
+    let listItems = document.querySelectorAll(".label");
+    // console.log(e.target.parentElement.innerText);
+    // console.log(listItems);
+    listItems.forEach((element) => {
+      console.log(element);
+      if (element === e.target) {
+        console.log("targeted");
+      }
+    });
+
+    // show input box and allow edit
+    // edit button changes to save button
+    // when user clicks save button;
+    // updated item appears in list
+    // save button changes to edit button
+  };
 }
 
 document.querySelectorAll("li").forEach(createCloseButton);
