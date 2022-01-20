@@ -10,6 +10,16 @@ function add() {
   createCloseButton(li);
 }
 
+//adding press enter functionality
+document.getElementById('task').addEventListener('keypress', function (e) {
+  if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+      add();
+      return false;
+  }
+});
+//end press enter functionality
+
 function createCloseButton(li) {
   let deleteButton = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
