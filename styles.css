@@ -1,7 +1,23 @@
-li {
-  list-style: none;
+body {
+  margin-left: 10em;
+  margin-right: 10em;
+  margin-top: 10vh;
+
 }
 
-.checked {
-  text-decoration: line-through;
-}
+
+li {
+    display: flex-block;
+    list-style: none;
+    font-size: 20px;
+  }
+  
+  #completed-tasks {
+    text-decoration: line-through;
+  }
+
+  #check-icon {
+    margin-right: 0.5em;
+    align-items: center;
+
+  }
