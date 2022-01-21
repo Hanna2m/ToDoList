@@ -38,20 +38,38 @@ button {
   border-radius: 16px;
   border: none;
 
+
 }
 
 li {
-    display: flex-block;
+    display: flex;
     list-style: none;
     font-size: 20px;
+    align-items: center;
   }
   
-  #completed-tasks {
-    text-decoration: line-through;
+  .completed-task {
+    text-decoration:line-through;
+    color:rgb(212, 212, 212)
   }
 
   #check-icon {
     margin-right: 0.5em;
-    align-items: center;
 
+  }
+
+  #edit-icon {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
+  }
+
+  #delete-icon {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+
+  }
+
+  .completed-tasks {
+    color: rgb(212, 212, 212);
   }
