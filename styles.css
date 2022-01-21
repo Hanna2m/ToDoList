@@ -62,6 +62,8 @@ li {
 fieldset {
   border-radius: 16px;
   margin-top: 1em;
+  border-width: 1px;
+  border-color: rgb(171, 171, 171);
 }
 
 
