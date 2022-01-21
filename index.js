@@ -1,6 +1,7 @@
 function add() {
   // add button text change back to add
   document.getElementById("addBtn").innerHTML = "add";
+  document.getElementById("task").placeholder = "Add your task";
 
   let li = document.createElement("LI");
   let input_value = document.form_main.task.value;
