@@ -2,13 +2,12 @@ body {
   margin-left: 10em;
   margin-right: 10em;
   margin-top: 10vh;
-
 }
 
 header {
   height: 15vh;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: aliceblue;
   padding-left: 16px;
   font-size: 2.5em;
@@ -16,20 +15,19 @@ header {
 }
 
 form {
-  display:inline-flex;
+  display: inline-flex;
   margin-top: 2.25em;
   width: max-content;
 }
 
 #task {
-  display:flex;
+  display: flex;
   width: 400px;
   height: 32px;
   border-radius: 16px;
   border-color: rgb(212, 212, 212);
   padding-left: 16px;
   justify-content: center;
-
 }
 
 button {
@@ -37,8 +35,6 @@ button {
   width: 80px;
   border-radius: 16px;
   border: none;
-
-
 }
 
 li {
@@ -73,3 +69,8 @@ li {
   .completed-tasks {
     color: rgb(212, 212, 212);
   }
+
+
+.hidden {
+  display: none;
+}
