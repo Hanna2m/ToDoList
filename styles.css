@@ -49,22 +49,6 @@ li {
     color:rgb(212, 212, 212)
   }
 
-  #check-icon {
-    margin-right: 0.5em;
-
-  }
-
-  #edit-icon {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-
-  }
-
-  #delete-icon {
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-
-  }
 
   .completed-tasks {
     color: rgb(212, 212, 212);
@@ -74,3 +58,14 @@ li {
 .hidden {
   display: none;
 }
+fieldset {
+  border-radius: 16px;
+  margin-top: 1em;
+}
+
+
+legend {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+

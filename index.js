@@ -23,26 +23,25 @@ function add() {
   document.querySelector("ul").appendChild(li);
   document.form_main.task.value = "";
 
-  //delete Btn
-  let deleteButton = document.createElement("SPAN");
-  deleteButton.className = "material-icons";
-  let txt = document.createTextNode("delete");
-  deleteButton.id = "delete-icon";
-  deleteButton.style.height = "24px";
-  deleteButton.style.color = "red";
-  deleteButton.appendChild(txt);
-  li.appendChild(deleteButton);
-
-  // edit button
-
+// edit button
   let editTaskButton = document.createElement("span");
-  editTaskButton.id = "edit-icon";
+  editTaskButton.id = "edit-btn";
   editTaskButton.className = "material-icons";
   let editTxt = document.createTextNode("edit");
   editTaskButton.style.height = "24px";
   editTaskButton.style.color = "#DDDDDD";
   editTaskButton.appendChild(editTxt);
   li.appendChild(editTaskButton);
+
+//delete Btn
+  let deleteButton = document.createElement("SPAN");
+  deleteButton.className = "material-icons";
+  let txt = document.createTextNode("delete");
+  deleteButton.id = "delete-btn";
+  deleteButton.style.height = "24px";
+  deleteButton.style.color = "red";
+  deleteButton.appendChild(txt);
+  li.appendChild(deleteButton);
 
   //delete task
   deleteButton.addEventListener(
@@ -71,31 +70,15 @@ function add() {
 
   //completed task
 
-  let taskCompleted = document.getElementById("completed-tasks");
-  taskCompleted.hidden = true;
-  let completedTasksHolder = document.getElementById("completed-tasks");
-
-  document.querySelector("ul").addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-      let item = e.target;
-      taskCompleted.hidden = false;
-      document.getElementById("delete-btn").style.display = "none";
-      document.getElementById("edit-btn").style.display = "none";
-      document.getElementById("check-icon").style.color = "green";
-      taskCompleted.appendChild(item);
-    }
-  });
-
+  
 
 let taskCompleted = document.getElementById("completed-tasks");
-//let completedTasksHolder = document.getElementById("completed-tasks");
-
 document.querySelector("ul").addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     let item = e.target
     console.log(e.target.textContent);
-    document.getElementById("delete-icon").style.display = "none";
-    document.getElementById("edit-icon").style.display = "none";
+    document.getElementById("delete-btn").style.display = "none";
+    document.getElementById("edit-btn").style.display = "none";
     document.getElementById("check-icon").style.color = "green"
     taskCompleted.appendChild(item);
 
