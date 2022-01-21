@@ -20,27 +20,26 @@
 
   <body>
     <header>To Do List</header>
+    <main class="content-wrap">
+      <form name="form_main">
+        <!-- <label for="task">Tasks: </label> -->
+        <input type="text" name="task" id="task" placeholder="Add your task" />
+        <br />
+        <button id="addBtn" type="button" onclick="add()">Add</button>
+      </form>
 
-    <form name="form_main">
-      <!-- <label for="task">Tasks: </label> -->
-      <input type="text" name="task" id="task" placeholder="Add your task" />
-      <br />
-      <button id="addBtn" type="button" onclick="add()">Add</button>
-    </form>
+      <fieldset>
+        <legend>Tasks:</legend>
+        <ul>
+          <li></li>
+        </ul>
+      </fieldset>
 
-    <fieldset>
-      <legend>Tasks:</legend>
-      <ul>
-        <li></li>
-      </ul>
-    </fieldset>
-
-    <fieldset>
-      <legend>Done:</legend>
-      <ul class="completed-tasks" id="completed-tasks">
-      </ul>
-    </fieldset>
-
+      <fieldset>
+        <legend>Done:</legend>
+        <ul class="completed-tasks" id="completed-tasks"></ul>
+      </fieldset>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
