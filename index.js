@@ -57,6 +57,7 @@ function add() {
     editText.placeholder = input_value;
     e.target.parentElement.classList.add("hidden");
     document.getElementById("addBtn").innerHTML = "edit";
+    document.getElementById("task").style.border = "3px solid #adff2fab";
   };
 
   //adding press enter functionality
