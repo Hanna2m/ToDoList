@@ -38,26 +38,22 @@ button {
 }
 
 li {
-    display: flex;
-    list-style: none;
-    font-size: 20px;
-    align-items: center;
-  }
-  
-  .completed-task {
-    text-decoration:line-through;
-    color:rgb(212, 212, 212)
-  }
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  position: relative;
+}
 
 
   .completed-tasks {
     color: rgb(212, 212, 212);
   }
 
-
 .hidden {
   display: none;
 }
+
 fieldset {
   border-radius: 16px;
   margin-top: 1em;
@@ -69,3 +65,12 @@ legend {
   font-family: "Poppins", sans-serif;
 }
 
+
+#delete-btn {
+  position: absolute;
+  right: 16px;
+}
+#edit-btn {
+  position: absolute;
+  right: 56px;
+}
