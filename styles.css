@@ -38,9 +38,11 @@ button {
 }
 
 li {
-  display: flex-block;
+  display: flex;
+  align-items: center;
   list-style: none;
   font-size: 20px;
+  position: relative;
 }
 
 #completed-tasks {
@@ -54,4 +56,13 @@ li {
 
 .hidden {
   display: none;
+}
+
+#delete-btn {
+  position: absolute;
+  right: 16px;
+}
+#edit-btn {
+  position: absolute;
+  right: 56px;
 }
