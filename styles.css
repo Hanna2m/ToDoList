@@ -17,7 +17,7 @@ header {
 form {
   display: inline-flex;
   margin-top: 2.25em;
-  width: max-content;
+  max-width: 100%;
 }
 
 #task {
@@ -46,10 +46,9 @@ li {
   position: relative;
 }
 
-
-  .completed-tasks {
-    color: rgb(212, 212, 212);
-  }
+.completed-tasks {
+  color: rgb(212, 212, 212);
+}
 
 .hidden {
   display: none;
@@ -58,14 +57,13 @@ li {
 fieldset {
   border-radius: 16px;
   margin-top: 1em;
+  border: 1px solid grey;
 }
-
 
 legend {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
-
 
 #delete-btn {
   position: absolute;
