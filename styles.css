@@ -36,6 +36,10 @@ button {
   width: 80px;
   border-radius: 16px;
   border: none;
+  background-color:#3B002E;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+
 }
 
 li {
@@ -74,4 +78,8 @@ legend {
 #edit-btn {
   position: absolute;
   right: 56px;
+}
+
+#check-icon {
+  margin-right: 16px;
 }

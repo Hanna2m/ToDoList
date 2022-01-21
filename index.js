@@ -29,7 +29,7 @@ function add() {
   editTaskButton.className = "material-icons";
   let editTxt = document.createTextNode("edit");
   editTaskButton.style.height = "24px";
-  editTaskButton.style.color = "#DDDDDD";
+  editTaskButton.style.color = "3A002D";
   editTaskButton.appendChild(editTxt);
   li.appendChild(editTaskButton);
 
