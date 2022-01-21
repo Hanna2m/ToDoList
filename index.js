@@ -2,6 +2,7 @@ function add() {
   // add button text change back to add
   document.getElementById("addBtn").innerHTML = "add";
   document.getElementById("task").placeholder = "Add your task";
+  document.getElementById("task").style.border = "";
 
   let li = document.createElement("LI");
   let input_value = document.form_main.task.value;
@@ -23,17 +24,17 @@ function add() {
   document.querySelector("ul").appendChild(li);
   document.form_main.task.value = "";
 
-// edit button
+  // edit button
   let editTaskButton = document.createElement("span");
   editTaskButton.id = "edit-btn";
   editTaskButton.className = "material-icons";
   let editTxt = document.createTextNode("edit");
   editTaskButton.style.height = "24px";
-  editTaskButton.style.color = "#DDDDDD";
+  editTaskButton.style.color = "3A002D";
   editTaskButton.appendChild(editTxt);
   li.appendChild(editTaskButton);
 
-//delete Btn
+  //delete Btn
   let deleteButton = document.createElement("SPAN");
   deleteButton.className = "material-icons";
   let txt = document.createTextNode("delete");
@@ -71,19 +72,17 @@ function add() {
 
   //completed task
 
-  
+  let taskCompleted = document.getElementById("completed-tasks");
+  document.querySelector("ul").addEventListener("click", (e) => {
+    if (e.target.tagName === "LI") {
+      let item = e.target;
+      console.log(e.target.textContent);
+      document.getElementById("delete-btn").style.display = "none";
+      document.getElementById("edit-btn").style.display = "none";
+      document.getElementById("check-icon").style.color = "green";
+      taskCompleted.appendChild(item);
 
-let taskCompleted = document.getElementById("completed-tasks");
-document.querySelector("ul").addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    let item = e.target
-    console.log(e.target.textContent);
-    document.getElementById("delete-btn").style.display = "none";
-    document.getElementById("edit-btn").style.display = "none";
-    document.getElementById("check-icon").style.color = "green"
-    taskCompleted.appendChild(item);
-
-    return li;
-  
- }
-});}
+      return li;
+    }
+  });
+}
