@@ -48,6 +48,11 @@ li {
   list-style: none;
   font-size: 20px;
   position: relative;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .completed-tasks {
@@ -80,4 +85,9 @@ legend {
 
 #check-icon {
   margin-right: 16px;
+}
+
+.task-text {
+  display: flex;
+  width: 70%;
 }

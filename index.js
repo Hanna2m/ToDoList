@@ -5,9 +5,14 @@ function add() {
   document.getElementById("task").style.border = "";
 
   let li = document.createElement("LI");
+  let textBlock = document.createElement("div")
+  textBlock.className = "task-text";
   let input_value = document.form_main.task.value;
   let input_text = document.createTextNode(input_value);
   input_value.id = "input";
+  textBlock.appendChild(input_text);
+
+  
 
   //checkbox
 
@@ -20,7 +25,7 @@ function add() {
   checkBox.appendChild(checkTxt);
   li.appendChild(checkBox);
 
-  li.appendChild(input_text);
+  li.appendChild(textBlock);
   document.querySelector("ul").appendChild(li);
   document.form_main.task.value = "";
 
@@ -72,17 +77,18 @@ function add() {
 
   //completed task
 
+ 
   let taskCompleted = document.getElementById("completed-tasks");
-  document.querySelector("ul").addEventListener("click", (e) => {
-    if (e.target.tagName === "LI") {
-      let item = e.target;
-      console.log(e.target.textContent);
+  // document.querySelector("ul").addEventListener("click", (e) => {
+  document.querySelector("li").addEventListener("click", (e) => {
+    // if (e.target.tagName === "LI") {
+      let item = e.target.parentElement;
+      console.log(item);
       document.getElementById("delete-btn").style.display = "none";
       document.getElementById("edit-btn").style.display = "none";
       document.getElementById("check-icon").style.color = "green";
       taskCompleted.appendChild(item);
 
       return li;
-    }
-  });
+  })
 }
