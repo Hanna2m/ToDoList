@@ -25,12 +25,13 @@ form {
   width: 400px;
   height: 32px;
   border-radius: 16px;
-  border-color: rgb(212, 212, 212);
+  border: 1px solid rgb(171, 171, 171);
   padding-left: 16px;
   justify-content: center;
 }
 
 button {
+  text-transform: uppercase;
   margin-left: 16px;
   width: 80px;
   border-radius: 16px;
